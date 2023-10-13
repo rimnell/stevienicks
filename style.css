@@ -1,0 +1,482 @@
+@font-face {
+    font-family:bungeeshade;
+    src: url(fonts/Bungee_Shade/BungeeShade-Regular.ttf);
+}
+@font-face {
+    font-family:bungeeoutlineregular;
+    src: url(fonts/Bungee_Outline/BungeeOutline-Regular.ttf);
+}
+@font-face {
+    font-family:barlowcondensedlight ;
+    src: url(fonts/Barlow_Condensed/BarlowCondensed-Light.ttf);
+}
+@font-face {
+    font-family:barlowsemibold;
+    src: url(fonts/Barlow_Condensed/BarlowCondensed-SemiBold.ttf);
+}
+    
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(bilderstevienicks/stevienicks.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+}
+
+main{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+header{
+    color: whitesmoke;
+    size: 5vw;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin: 20px;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+nav a{
+    display: flex;
+    background-color:rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    margin: 2px;
+    flex-shrink: 0;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-basis: 0;
+    height: 50px;
+    font-size: 30px;
+}
+
+nav a:not(:nth-child(2)):hover{
+        background-color: rgba(0, 0, 0, 0.5);
+        color: whitesmoke;
+    }
+
+nav a:nth-child(2){
+    border: 1px solid whitesmoke;
+    box-shadow: 0 0 10px whitesmoke;
+    cursor: default;
+}
+
+    
+section{
+        display: grid;
+        border: 1px solid whitesmoke;
+        border-radius: 10px;
+        margin: 20px;
+        grid-template-columns: auto 10px 233px 10px 233px 10px;
+        grid-template-rows: repeat(3,45px) 30px repeat(7,45px) 10px repeat(5,45px) 225px;
+        padding:20px;
+        background-color: rgba(0, 0, 0, 0.5);
+}
+
+article{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows:subgrid ;
+    grid-auto-rows: 0;
+    gap: 5px;
+    grid-row: 18;
+    grid-column: 1 / 6;
+}
+
+section h2{
+    grid-column:1 ;
+    grid-row:1 ;
+}
+section h3{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+section p:first-of-type{
+    grid-column: 1;
+    grid-row: 4;
+}
+
+section ul{
+    grid-row: 5;
+}
+
+section p:nth-of-type(2){
+    grid-row: 8;
+}
+
+section img:first-of-type{
+    height: 475px;
+    border-radius: 30px 30px 0px 0px; 
+    grid-column: 3 / 5 ;
+}
+
+section h4:first-of-type{
+    grid-row: 13 / 15;
+    grid-column: 3;
+    padding-left: 20px;
+}
+
+section h4:nth-of-type(2){
+    grid-row: 13 / 15;
+    grid-column: 5;
+    padding-left: 20px;
+}
+
+section:first-of-type ol:first-of-type{
+    grid-row: 14 / 18;
+    grid-column: 3;
+    border-radius: 0 0 0 30px;
+}
+
+section:first-of-type ol:nth-of-type(2){
+    grid-row: 14 / 18;
+    grid-column: 5;
+    border-radius: 0 0 30px 0;
+}
+
+ol {
+    color: #1E5694;
+    background-color:#DDD4D4 ;
+    font-family: "barlowcondensedlight";
+}
+    
+p{
+    color: whitesmoke;
+    font-family: "barlowcondensedlight";
+}
+
+section article p:not(section article p:nth-of-type(4)){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section article p:first-of-type{
+    background-color: #1E5694;
+    color: #DDD4D4;
+    border-radius: 30px 0 30px 30px;
+    padding: 15px;
+}
+
+section article p:nth-of-type(2){
+    grid-column: 3/5;
+    background-color: #1E5694;
+    color: #DDD4D4;
+    border-radius: 30px 30px 30px 0px;
+    padding: 15px;
+}
+
+section article p:nth-of-type(3){
+    grid-column: 5;
+    position: relative;
+    background-image: url(bilderstevienicks/belladonna3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0px 30px 30px 30px;
+    padding: 15px;
+}
+
+section article p:nth-of-type(4){
+    grid-column: 5;
+    position: relative;
+    bottom: -180px;
+    color: black;
+    text-shadow: 0 0 5px #1E5694 , 0 0 5px whitesmoke; 
+    left: 10px;
+    padding: 15px;
+}
+
+section article p:last-of-type{
+    background-color: #1E5694;
+    color: #DDD4D4;
+    border-radius: 0px 30px 30px 30px;
+    padding: 15px;
+}
+
+ul{
+        list-style: none;
+        color: whitesmoke;
+        margin: 0;
+        font-family: "barlowcondensedlight";
+}
+    
+h1, h2, h3{
+        color: whitesmoke;
+        margin: 0;
+}
+    
+h4{
+    color: #1E5694;
+    background-color:#DDD4D4 ;
+    padding:15px;
+    margin: 0;
+}
+
+h1{
+    padding: 20px;
+    font-family: "BungeeShade";
+}
+
+h2{
+    font-family: "bungeeoutlineregular";
+}
+
+h3, h4{
+    font-family: "barlowsemibold";
+}
+
+p{
+    margin: 1px;
+}
+
+/* media queries */
+
+@media (min-width: 400px) and (max-width: 500px) {
+    /* phone */
+     body {
+         background-image: url(bilderstevienicks/IMG_5883.JPG);
+         background-size: cover;
+         background-position: center;
+         margin: auto;
+     }
+ 
+     
+     header {
+         display: flex;
+         flex-direction: column;
+         flex-wrap: wrap;
+         margin: 0;
+         padding: 20px 0;
+     }
+ 
+     h1 {
+         text-align: center;
+         font-size: 70px;
+         margin: 0;
+         padding: 20px 0;
+     }
+ 
+     nav a {
+         font-size: 20px;
+         margin: 40px 0;
+         text-align: center;
+         white-space: nowrap;
+         width: 76px;
+         height: 60px;
+     }
+
+     section{
+        grid-template-columns:1fr 10px 1fr ;
+        grid-template-rows: 83vw 2vw 10vw 38vw 5vw 10vw 7vw 12vw 5vw 13vw 10vw 35vw 45vw 45vw;
+     }
+ 
+     section img:first-of-type {
+         height: auto;
+         border-radius: 30px 30px 0 0;
+         grid-row: 1;
+         grid-column: 1 / 5;
+         max-width: 100%;
+     }
+ 
+     section h4:first-of-type {
+         grid-row: 3/ 5;
+         grid-column: 1;
+         padding-left: 20px;
+         margin: 0;
+         padding: 15px;
+         border-radius: 0 0 0 10px ;
+     }
+ 
+     section h4:nth-of-type(2) {
+         grid-row: 3 / 5;
+         grid-column: 3/4;
+         padding-left: 20px;
+         margin: 0;
+         padding: 15px;
+         border-radius: 0 0 10px 0;
+     }
+ 
+     section:first-of-type ol:first-of-type{
+         grid-row: 4/ 6;
+         grid-column: 1/2;
+         border-radius: 0 0 0 30px;
+         margin-bottom: 5px;
+         font-size: 3.3vw;
+     }
+ 
+     section:first-of-type ol:nth-of-type(2) {
+         grid-row: 4 / 6;
+         grid-column: 3/4;
+         border-radius: 0 0 30px 0;
+         margin-bottom: 5px;
+         font-size: 3.3vw;
+     }
+
+     section h2{
+        grid-row: 6;
+        grid-column: 1/4;
+        font-size: 7.4vw;
+     }
+     
+     section h3{
+        grid-row: 7;
+        grid-column: 1/6;
+        font-size: 25px;
+     }
+
+     section > p:first-of-type{
+        grid-row: 9;
+    }
+     section ul{
+        grid-row: 10;
+            grid-column: 1/5;
+    }
+     section > p:nth-of-type(2){
+        grid-row: 12;
+        grid-column: 1/5;
+        font-size: 3.4vw;
+    }
+
+     section article{
+        grid-template-columns:repeat(3, 1fr);
+        grid-row: 13/16;
+
+     }
+
+     section article p:first-of-type{
+        grid-row: 1;
+        grid-column: 1;
+        font-size: 12px;
+     }
+     
+     section article p:nth-of-type(2){
+        grid-row: 1;
+        grid-column: 2/4;
+     }
+
+     section article p:nth-of-type(3){
+        grid-row: 2;
+        grid-column:2/3 ;
+     }
+
+     section article p:nth-of-type(4){
+        grid-row: 2;
+        grid-column: 2/3;
+        bottom: -80px;
+        font-size: 2.6vw;
+        left: -12px;
+     }
+
+     section > article p:last-of-type{
+        grid-row: 2;
+        grid-column:3/4 ;
+     }
+
+
+ }
+ 
+ @media (min-width: 800px) and (max-width:900px) {
+     h1 {
+         font-size: 75px;
+     }
+ 
+     h2 {
+         font-size: 40px;
+     }
+ 
+     h3 {
+         font-size: 30px;
+     }
+ 
+     h4 {
+         font-size: 20px;
+     }
+ 
+     ol {
+         font-size: 15px;
+     }
+ 
+     ul {
+         font-size: 15px;
+     }
+ 
+     p {
+         font-size: 15px;
+     }
+ }
+ 
+ @media (min-width: 900px) and (max-width: 1200px) {
+     /* fonts
+      ökar med bredden */
+ 
+      h1 {
+         font-size: 11vw;
+      }
+ 
+      h2 {
+         font-size: 4.5vw;
+      }
+ 
+      h3 {
+          font-size: 1.9vw;
+      }
+ 
+      h4 {
+          font-size: 1.7vw;
+      }
+ 
+      ol {
+         font-size: 1.6vw;
+      }
+ 
+      p, ul {
+         font-size: 1.6vw;
+      }
+ }
+ 
+ @media (min-width: 1200px) {
+     /* innehållet slutar växa */
+ 
+     h1 {
+         font-size: 132px;
+      }
+ 
+      h2 {
+         font-size: 54px;
+      }
+ 
+      h3 {
+          font-size: 22.8px;
+      }
+ 
+      h4 {
+          font-size: 20.4px;
+      }
+ 
+      ol {
+         font-size: 18px;
+      }
+      
+      p, ul {
+         font-size: 19.2px;
+      }
+ 
+ }
+ 
