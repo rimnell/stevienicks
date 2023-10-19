@@ -665,12 +665,12 @@ section:nth-of-type(2) article p:last-of-type{
           font-size: 20.4px;
       }
  
+      p, ul {
+        font-size: 19.2px;
+     }
+
       ol {
          font-size: 18px;
-      }
-      
-      p, ul {
-         font-size: 19.2px;
       }
 
       main{
